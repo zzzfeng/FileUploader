@@ -25,7 +25,7 @@ public class FileInfoEncoder extends ProtocolEncoderAdapter {
 		ioBuffer.putInt(info.getFileNameLength());
 		ioBuffer.putInt(info.getFileContentLenth());
 		ioBuffer.putString(info.getFileName(), encoder);
-		System.out.println("FileName : " + info.getFileName());
+
 		ioBuffer.put(info.getFileContent());
 
 		ioBuffer.flip();

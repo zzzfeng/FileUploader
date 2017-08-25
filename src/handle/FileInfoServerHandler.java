@@ -44,7 +44,7 @@ public class FileInfoServerHandler extends IoHandlerAdapter {
 			 * fm.getFileName())); os.write(fm.getFileStream()); os.flush();
 			 */
 			// 用PrintStream
-			os = new PrintStream(new FileOutputStream(destDir + File.pathSeparator + info.getFileName()));
+			os = new PrintStream(new FileOutputStream(destDir + "\\" + info.getFileName()));
 			os.write(info.getFileContent());
 			os.flush();
 		} finally {

@@ -106,7 +106,7 @@ public class FileInfoDecoder extends CumulativeProtocolDecoder {
 			info.setId(newIoBuffer.getInt());
 			info.setFileNameLength(newIoBuffer.getInt()); // 文件名长度（字节）
 
-			info.setFileNameLength(newIoBuffer.getInt()); // 文件长度（字节）
+			info.setFileContentLenth(newIoBuffer.getInt()); // 文件长度（字节）
 			info.setFileName(newIoBuffer.getString(info.getFileNameLength(), decoder)); // 文件名。UTF-8格式
 
 			dataPool = info.getFileContentLenth();

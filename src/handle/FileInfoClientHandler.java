@@ -26,7 +26,10 @@ public class FileInfoClientHandler extends IoHandlerAdapter {
 				info.setId(i);
 				info.setFileNameLength(files[i - 1].getName().getBytes().length);
 				info.setFileName(files[i - 1].getName());
-				info.setFileContent(BytesUtil.getBytes(files[i - 1].getAbsolutePath()));
+				byte[] content = BytesUtil.getBytes(files[i - 1].getAbsolutePath());
+				info.setFileContent(content);
+				info.setFileContentLenth(content.length);
+
 				session.write(info);
 			}
 		} else {
